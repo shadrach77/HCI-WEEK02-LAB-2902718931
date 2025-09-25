@@ -157,10 +157,22 @@
 
       <section>
         <h2>Post a Comment!</h2>
+
         <form action="#" method="post">
-          <label for="email">Email: </label>
+          <label for="name">Name<span>*</span></label>
           <input
             type="text"
+            id="name"
+            name="name"
+            placeholder="Please enter a display name"
+            required
+          />
+
+          <br />
+
+          <label for="email">Email<span>*</span></label>
+          <input
+            type="email"
             id="email"
             name="email"
             placeholder="Please enter a valid email"
@@ -176,13 +188,13 @@
           <br />
 
           <label for="alert">Yes</label>
-          <input type="radio" id="alert" name="alert" value="yes" />
+          <input type="radio" id="alert" name="alert" value="yes" checked />
           <label for="alert">No</label>
           <input type="radio" id="alert" name="alert" value="no" />
 
           <br />
 
-          <label for="comment">Comment</label>
+          <label for="comment">Comment<span>*</span></label>
           <br />
           <textarea
             id="comment"
@@ -190,6 +202,7 @@
             rows="10"
             cols="40"
             placeholder="Write your comment here..."
+            required
           ></textarea>
           <br />
           <label for="agree">
